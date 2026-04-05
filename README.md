@@ -1,33 +1,34 @@
-# 🎓 Student Performance Predictor (ML + Streamlit)
+# 🎓 Student Performance Predictor (Machine Learning + Streamlit)
 
 ## 📌 Overview
 
-This project is a beginner-level **supervised machine learning application** that predicts whether a student is likely to pass or fail based on study hours and attendance.
+This project is a **supervised machine learning application** that predicts whether a student will pass or fail based on academic performance and study-related factors.
 
-The model is built using **Logistic Regression** and deployed as an interactive web application using **Streamlit**.
+The model is trained using a real-world dataset and deployed as an interactive web application using Streamlit.
 
 ---
 
 ## 🚀 Features
 
-* Predict student performance (Pass/Fail)
-* User-friendly web interface
-* Real-time predictions based on input
-* Lightweight and easy to run
+* Predicts student performance (Pass/Fail)
+* Uses real-world dataset for training
+* Interactive and user-friendly web interface
+* Real-time predictions based on user input
 
 ---
 
 ## 🧠 Machine Learning Approach
 
-* Algorithm Used: Logistic Regression
-* Type: Supervised Learning (Classification)
-* Input Features:
+* Algorithm: Logistic Regression
+* Type: Supervised Learning (Binary Classification)
+* Target Variable: Pass (1) / Fail (0)
 
-  * Study Hours
-  * Attendance (%)
-* Output:
+### 📊 Input Features:
 
-  * Pass (1) / Fail (0)
+* Study Time
+* Absences
+* First Period Grade (G1)
+* Second Period Grade (G2)
 
 ---
 
@@ -41,19 +42,28 @@ The model is built using **Logistic Regression** and deployed as an interactive 
 
 ---
 
-## 📂 Project Structure
+## 📂 Dataset
+
+* Dataset: Student Performance Dataset
+* Source: Kaggle
+* Description: Contains student-related attributes such as study time, absences, and grades
+
+---
+
+## ⚙️ Project Structure
 
 ```
 project/
-│── app.py          # Streamlit web app
+│── app.py          # Streamlit application
 │── model.py        # Model training script
-│── model.pkl       # Saved trained model
-│── README.md       # Project documentation
+│── model.pkl       # Trained model file
+│── student-mat.csv # Dataset
+│── README.md       # Documentation
 ```
 
 ---
 
-## ▶️ How to Run
+## ▶️ How to Run the Project
 
 ### 1. Install Dependencies
 
@@ -77,25 +87,31 @@ streamlit run app.py
 
 ## 🎯 Usage
 
-1. Enter study hours
-2. Enter attendance percentage
-3. Click **Predict**
-4. View result (Pass/Fail)
+1. Enter student details such as study time, absences, and previous grades
+2. Click the **Predict** button
+3. View whether the student is likely to pass or fail
 
 ---
 
-## 📊 Future Improvements
+## 📊 Model Evaluation
 
-* Use real-world dataset
-* Add more features (sleep, assignments, etc.)
-* Improve UI design
-* Deploy on cloud (Streamlit Cloud)
+* The model is evaluated using accuracy score
+* Provides a measure of how well the model predicts outcomes on test data
+
+---
+
+## 🔮 Future Improvements
+
+* Use larger and more diverse datasets
+* Add more features (e.g., extracurricular activities, sleep patterns)
+* Improve UI/UX design
+* Deploy application on cloud platforms
 
 ---
 
 ## 🤝 Contribution
 
-Feel free to fork the repository and improve the project.
+Contributions are welcome. Feel free to fork the repository and improve the project.
 
 ---
 
@@ -109,4 +125,4 @@ LinkedIn: https://linkedin.com
 
 ## ⭐ Acknowledgment
 
-This project was built as part of learning Machine Learning concepts and deploying models using Streamlit.
+This project was developed to understand the fundamentals of Machine Learning and model deployment using Streamlit.
